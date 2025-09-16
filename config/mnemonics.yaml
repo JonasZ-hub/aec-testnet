@@ -1,0 +1,6 @@
+- mnemonic: "canyon rib never high asthma army sustain quit punch van speak tip divert stone cloud identify orange logic deposit annual thumb mass village grass" # a 24 word BIP 39 mnemonic
+  start: 0 # account index to start from
+  count: 100 # number of validators to generate
+  balance: 32000000000 # effective balance
+  wd_address: "0x9e3B04b8167F602A3B5f5E887163B2643D80e83e" # withdrawal address
+  wd_prefix: "0x02" # withdrawal credentials prefix

@@ -1,0 +1,18 @@
+使用脚本gen_enodes.py创建nodekey和enode
+需要安装ecdsa：sudo apt install -y python3-ecdsa
+命令如下：
+python3 gen_enodes.py \
+  --ips 159.138.146.42,97.74.101.69,159.138.9.39\
+  --port-base 30303 \
+  --outdir ./enodes \
+  --count 3
+指定ip地址和数量，如果服务器的端口不同可以使用port参数指定端口，例如--port 30304,30305;端口和ip一一对应，例如--port 30304,30305 --ips 18.162.236.244,18.167.121.103，在启动erigon时指定nodekey和enode
+
+enode在enodes/noide1/enode.txt中：
+enode://a29caa4c98026059d33765f88b3419a189f47b38604b53f932532ebae5498842e2b7269cf558e5b179cf7112a115afdad59bb41b8bae6f8201d5d0018b36037b@18.162.236.244:30303
+
+将其他节点的enode添加到erigon-config.yaml中的staticpeers和trustedpeers字段中以实现p2p连接，例如：
+staticpeers:
+  - enode://a29caa4c98026059d33765f88b3419a189f47b38604b53f932532ebae5498842e2b7269cf558e5b179cf7112a115afdad59bb41b8bae6f8201d5d0018b36037b@18.162.236.244:30303
+trustedpeers:
+  - enode://a29caa4c98026059d33765f88b3419a189f47b38604b53f932532ebae5498842e2b7269cf558e5b179cf7112a115afdad59bb41b8bae6f8201d5d0018b36037b@18.162.236.244:30303

@@ -1,0 +1,7 @@
+执行gen_prysm_peerids.sh脚本生成指定数量的peerid，数量在脚本里改
+peerid按如下格式拼接成peer参数：
+"--peer=/ip4/18.167.121.103/tcp/13000/p2p/16Uiu2HAmTVhCrQteUWpb42moxfgyXEY1R7KFTdwDniS8VmMCQEvU"
+p2p的后面的就是peerid，peerid在peerid-batch/peerods.csv
+
+prysm使用你生成的peerid需要将network-keys拷贝到datadir下，并且不要删除network-keys，保证peerid不变
+如果本服务器使用的node1拼成peer参数，其他节点服务器就不能在使用node1

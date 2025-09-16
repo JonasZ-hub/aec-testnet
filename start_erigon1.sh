@@ -1,0 +1,29 @@
+nohup erigon --networkid=1658 \
+  --verbosity=debug \
+  --datadir=$PWD/data/erigon \
+  --port=30303 \
+  --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin \
+  --http.vhosts=* \
+  --ws \
+  --allow-insecure-unlock \
+  --v5disc \
+  --http \
+  --http.addr=0.0.0.0 \
+  --http.corsdomain=* \
+  --http.port=8545 \
+  --nat=extip:159.138.146.42 \
+  --authrpc.jwtsecret=$PWD/secret/jwt.hex \
+  --authrpc.addr=0.0.0.0 \
+  --authrpc.port=8551 \
+  --authrpc.vhosts=* \
+  --externalcl \
+  --metrics \
+  --metrics.addr=0.0.0.0 \
+  --metrics.port=9001 \
+  --torrent.port=42069 \
+  --nodiscover=true \
+  --discovery.dns="" \
+  --staticpeers="enode://5cf2c831fc63a4f49e15b320858ef4d98b4febf4313167e9f09bd43f97b974e0a03833e28768e422deaab266bcad5f909588326fe6af82712fd87f71917fa9ec@94.74.101.69:30303,enode://07b9d69a43269df62565e244e0ef29d9b353df65050034ebf5b089578725e1897c114ba195fe2969bcf9687a102d9d1a67ca329ecc890dc66a83095be536167e@159.138.9.39:30303" \
+  --trustedpeers="enode://5cf2c831fc63a4f49e15b320858ef4d98b4febf4313167e9f09bd43f97b974e0a03833e28768e422deaab266bcad5f909588326fe6af82712fd87f71917fa9ec@94.74.101.69:30303,enode://07b9d69a43269df62565e244e0ef29d9b353df65050034ebf5b089578725e1897c114ba195fe2969bcf9687a102d9d1a67ca329ecc890dc66a83095be536167e@159.138.9.39:30303" \
+  --nodekey=$PWD/secret/nodekey1.hex \
+  > $PWD/logs/erigon.log 2>&1 &

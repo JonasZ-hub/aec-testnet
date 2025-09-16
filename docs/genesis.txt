@@ -1,0 +1,18 @@
+
+eth-genesis-state-generator beaconchain \
+  --eth1-config genesis.json \
+  --config config.yaml \
+  --mnemonics mnemonics.yaml \
+  --state-output genesis.ssz
+
+
+INFO[0000] eth-beacon-genesis version: git-3f860cf      
+INFO[0000] loaded execution genesis. chainid: 2248      
+INFO[0000] loaded consensus config. genesis fork version: 0x10000038 
+INFO[0000] processing mnemonic 0, for 20 validators     
+INFO[0000] loaded 20 validators. total balance: 640 ETH 
+INFO[0000] genesis version: electra                     
+INFO[0000] genesis time: 1756879694                     
+INFO[0000] genesis validators root: 0x7361ce8fc37cb69b204d73b0a48cd9b8e5c33885e73823167529b994875b7d0b 
+INFO[0000] successfully built genesis state.            
+INFO[0000] serialized genesis state to SSZ file: genesis.ssz
