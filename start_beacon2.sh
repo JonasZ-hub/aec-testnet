@@ -10,13 +10,12 @@ nohup beacon-chain --chain-id=1658 --network-id=1658 \
   --p2p-tcp-port=13000 \
   --p2p-udp-port=12000 \
   --p2p-quic-port=13000 \
-  # --p2p-no-discovery=true \
   --min-sync-peers=0 \
   --p2p-max-peers=50 \
   --verbosity=debug \
   --slots-per-archive-point=32 \
   --suggested-fee-recipient=0x6318BC08F350835f8b2e2A542f04e2aB129Ab5C4 \
-  --jwt-secret=$PWD/jwt.hex \
+  --jwt-secret=$PWD/secret/jwt.hex \
   --disable-monitoring=false \
   --monitoring-host=0.0.0.0 \
   --monitoring-port=8080 \
@@ -24,12 +23,13 @@ nohup beacon-chain --chain-id=1658 --network-id=1658 \
   --pprofaddr=0.0.0.0 \
   --pprofport=6060 \
   --p2p-static-id=true \
-  --chain-config-file=$PWD/network-configs/config.yaml \
-  --genesis-state=$PWD/network-configs/genesis.ssz \
+  --chain-config-file=$PWD/network/config.yaml \
+  --genesis-state=$PWD/network/genesis.ssz \
   --contract-deployment-block=0 \
   --checkpoint-sync-url=http://159.138.146.42:3500 \
   --peer=/ip4/159.138.146.42/tcp/13000/p2p/16Uiu2HAmBR5zeE1NM3xeX6GjehfzTCjyiudP1Mt9E3txdRbLGic1 \
   --peer=/ip4/159.138.9.39/tcp/13000/p2p/16Uiu2HAm8QGAjuTEwuCV7n2XVYKvesarPWifLDJCujxySfUKzaDd \
-  > $PWD/beacon.log 2>&1 &
+  > $PWD/logs/beacon.log 2>&1 &
 
 # --no-discovery=false \
+ # --p2p-no-discovery=true \

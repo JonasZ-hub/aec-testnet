@@ -12,7 +12,7 @@ nohup beacon-chain \
   --p2p-tcp-port=13000 \
   --p2p-udp-port=12000 \
   --p2p-quic-port=13000 \
-  # --p2p-no-discovery=true \
+
   --min-sync-peers=0 \
   --p2p-max-peers=50 \
   --verbosity=debug \
@@ -36,3 +36,4 @@ nohup beacon-chain \
   > $PWD/logs/beacon.log 2>&1 &
 
 # --no-discovery=false \
+ # --p2p-no-discovery=true \

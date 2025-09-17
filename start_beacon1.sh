@@ -15,7 +15,6 @@ nohup beacon-chain \
   --p2p-udp-port=12000 \
   --p2p-quic-port=13000 \
   --p2p-static-id=true \
-  # --p2p-no-discovery=true \
   --p2p-max-peers=50 \
   --min-sync-peers=0 \
   --verbosity=debug \
@@ -32,4 +31,5 @@ nohup beacon-chain \
   --contract-deployment-block=0 \
   --peer=/ip4/94.74.101.69/tcp/13000/p2p/16Uiu2HAkwWqnYq4MqTgvWDXNjXy18hvz1CStpnUmNPuzp3Kdhxx6 \
   --peer=/ip4/159.138.9.39/tcp/13000/p2p/16Uiu2HAm8QGAjuTEwuCV7n2XVYKvesarPWifLDJCujxySfUKzaDd \
-  > $PWD/logs/beacon.log 2>&1 &
+  > $PWD/beacon.log 2>&1 &
+ # --p2p-no-discovery=true \
