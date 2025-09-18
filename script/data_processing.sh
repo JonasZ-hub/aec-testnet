@@ -3,11 +3,11 @@ set -euo pipefail
 
 BASE_DIR="${PWD}"
 ERIGON_DIR="${BASE_DIR}/data/erigon/"
-PRYSM_DIR="${BASE_DIR}/data/prysm/"
+PRYSM_DIR="${BASE_DIR}/data/beacon/"
 VALIDATOR_DIR="${BASE_DIR}/data/validator"
 
 # 1) 确保目录存在
-mkdir -p "${ERIGON_DIR}" "${PRYSM_DIR}"
+mkdir -p "${ERIGON_DIR}" "${PRYSM_DIR}" "${VALIDATOR_DIR}"
 
 usage() {
   cat <<EOF

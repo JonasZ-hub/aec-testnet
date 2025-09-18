@@ -1,7 +1,7 @@
 nohup beacon-chain \
   --chain-id=1658 \
   --network-id=1658 \
-  --datadir=$PWD/data/prysm \
+  --datadir=$PWD/data/beacon \
   --execution-endpoint=http://127.0.0.1:8551 \
   --chain-config-file=$PWD/network/config.yaml \
   --genesis-state=$PWD/network/genesis.ssz \
@@ -31,5 +31,5 @@ nohup beacon-chain \
   --contract-deployment-block=0 \
   --peer=/ip4/94.74.101.69/tcp/13000/p2p/16Uiu2HAkwWqnYq4MqTgvWDXNjXy18hvz1CStpnUmNPuzp3Kdhxx6 \
   --peer=/ip4/159.138.9.39/tcp/13000/p2p/16Uiu2HAm8QGAjuTEwuCV7n2XVYKvesarPWifLDJCujxySfUKzaDd \
-  > $PWD/beacon.log 2>&1 &
+  > $PWD/logs/beacon.log 2>&1 &
  # --p2p-no-discovery=true \
